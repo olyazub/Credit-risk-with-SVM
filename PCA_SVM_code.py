@@ -30,6 +30,7 @@ pca = PCA(n_components= None) #We will set it none so that we can see the varian
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
+
 explained_variance = pca.explained_variance_ratio_
 print(explained_variance)
 
@@ -64,7 +65,7 @@ X_test = sc.transform(X_test)
 
 #Create classifier object
 from sklearn.svm import SVC
-classifier_svm_kernel = SVC(C=5.0,kernel='rbf', gamma=0.12,tol=0.00001)
+classifier_svm_kernel = SVC(C=5.0,kernel='rbf', gamma=0.12,tol=0.00001)# change different gammas and costs
 classifier_svm_kernel.fit(X_train,y_train)
 
 #Predict the result for test values
